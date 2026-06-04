@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jorge Torres | Portfolio & Field Operations</title>
+    
+    <!-- Fuentes de Alta Velocidad (Fórmula 1 & Monospace) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=JetBrains+Mono:wght@400;500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Iconografía Técnica (FontAwesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Hoja de Estilos General (Incluirá las reglas del portafolio) -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="/image/icon.png">
+</head>
+<body>
+
+    <!-- Capas de Efectos Grid de Boxes -->
+    <div class="f1-carbon-overlay"></div>
+    <div class="pitlane-glow-sphere neon-orange-1"></div>
+
+    <!-- Encabezado Estilo F1 -->
+    <header class="f1-header">
+        <div class="container header-flex">
+            <div class="race-telemetry-status">
+                <a href="index-en.html" class="back-cockpit-link">
+                    <i class="fa-solid fa-arrow-left-long"></i> <span>RETURN_TO_COCKPIT</span>
+                </a>
+            </div>
+            
+            <div class="race-telemetry-status">
+                <span class="pit-indicator-blink"></span>
+                <span class="mono-text">// PORTFOLIO_MODULE_ONLINE</span>
+            </div>
+
+            <!-- Multi-language Selector for the portfolio -->
+            <div class="lang-selector-f1">
+                <a href="portafolio.html" class="lang-btn"><i class="fa-solid fa-flag-checkered"></i> ES</a>
+                <span class="lang-separator">|</span>
+                <a href="portafolio-en.html" class="lang-btn active">EN</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero del Portafolio: Panel de Filtros -->
+    <section class="portfolio-hero">
+        <div class="container">
+            <span class="f1-badge-category">// FIELD_LOGS_AND_EVIDENCE</span>
+            <h1 class="f1-tech-title">Operations Gallery</h1>
+            <p class="mono-text" style="color: var(--text-muted); margin-top: 0.5rem;">
+                Documentary and photographic record of predictive, preventive, and corrective maintenance executed by the operator.
+            </p>
+            
+            <!-- Barra de Filtros Dinámicos de Telemetría -->
+            <div class="filter-pitlane-hub" id="portfolio-filters">
+                <button class="filter-btn-f1 active" data-filter="all"><span><i class="fa-solid fa-border-all"></i> ALL_LOGS</span></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grilla de Despliegue de Proyectos -->
+    <main class="container">
+        <div class="projects-f1-grid" id="projects-container">
+            <div class="mono-text" style="grid-column: 1/-1; text-align: center; padding: 40px;">
+                <i class="fa-solid fa-gear fa-spin" style="color: var(--f1-orange); margin-right: 10px;"></i> Reading technical portfolio registers...
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de Página F1 -->
+    <footer class="f1-footer">
+        <div class="container footer-flex-f1">
+            <div class="footer-brand-tech">
+                <p class="mono-text">TRACK ENGINE BY LOBOLINK // OPERATIONS HUB</p>
+                <p class="copyright-text">&copy; 2026 Jorge Torres. Evidence verified under technical and logistical standards.</p>
+            </div>
+            <div class="system-clock-box">
+                <span class="mono-text">TELEMETRY: <span style="color: #00ffcc;">CONNECTED</span></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lógica Externa del Portafolio -->
+    <script src="js/portfolio.js"></script>
+</body>
+</html>

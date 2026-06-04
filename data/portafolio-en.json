@@ -1,0 +1,64 @@
+{
+    "proyectos": [
+        {
+            "id": "PRJ-001",
+            "categoria_id": "mantenimiento-industrial",
+            "categoria_label": "Industrial Maintenance",
+            "fecha_operacion": "MARCH 2026",
+            "titulo": "Complete Overhaul of Stationary Internal Combustion Engine",
+            "descripcion": "Disassembly, dimensional metrology diagnosis, and complete rebuild of the engine block and injection system for a backup power generator. Optimized compression ratios and reduced oil consumption by 14%.",
+            "imagen_url": "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=800&q=80",
+            "herramientas_tags": ["Micrometers", "Torque Wrenches", "Predictive", "Metrology", "Diesel Engine"]
+        },
+        {
+            "id": "PRJ-002",
+            "categoria_id": "electromecanica",
+            "categoria_label": "Electromechanical Systems",
+            "fecha_operacion": "JANUARY 2026",
+            "titulo": "Synchronization and Rewinding of 3-Phase Induction Motors",
+            "descripcion": "Corrective intervention on high-power motors for manufacturing extruders. Included rewinding calculations, Class H insulation setup, dynamic rotor balancing, and Megger insulation testing for safe commissioning.",
+            "imagen_url": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&q=80",
+            "herramientas_tags": ["Megger Test", "Dynamic Balancing", "Class H Insulation", "3-Phase", "Control Panels"]
+        },
+        {
+            "id": "PRJ-003",
+            "categoria_id": "infraestructura",
+            "categoria_label": "Infrastructure & Facilities",
+            "fecha_operacion": "NOVEMBER 2025",
+            "titulo": "Structural Upgrades and Fluid Network Deployment in Production Plant",
+            "descripcion": "Field execution supervision for heavy support mounting and routing of compressed air and high-pressure hydraulic pipe networks. Application of industrial epoxy coatings and strict HSEQ compliance.",
+            "imagen_url": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80",
+            "herramientas_tags": ["Pneumatic Networks", "SMAW Welding", "HSEQ Protocols", "Civil Works", "Epoxy Coatings"]
+        },
+        {
+            "id": "PRJ-004",
+            "categoria_id": "mantenimiento-industrial",
+            "categoria_label": "Industrial Maintenance",
+            "fecha_operacion": "AUGUST 2025",
+            "titulo": "Laser Alignment and Installation of Machine Beds and Gearboxes",
+            "descripcion": "Rigging and deployment of critical powertrain assemblies. Correction of angular and parallel misalignment using advanced laser instrumentation to eliminate mechanical vibrations and mitigate bearing failures.",
+            "imagen_url": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80",
+            "herramientas_tags": ["Laser Alignment", "Vibration Analysis", "SKF Bearings", "Gearboxes"]
+        },
+        {
+            "id": "PRJ-005",
+            "categoria_id": "electromecanica",
+            "categoria_label": "Electromechanical Systems",
+            "fecha_operacion": "MAY 2025",
+            "titulo": "Automation and Troubleshooting of Automatic Transfer Switches (ATS)",
+            "descripcion": "Diagnostics and replacement of heavy-duty power contactors and control relays in ATS equipment. Maintained full network failure simulations to guarantee uninterruptible power supply continuity.",
+            "imagen_url": "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?auto=format&fit=crop&w=800&q=80",
+            "herramientas_tags": ["PLCs", "ATS Units", "Electrical Blueprints", "Fluke Multimeters", "Thermography"]
+        },
+        {
+            "id": "PRJ-006",
+            "categoria_id": "infraestructura",
+            "categoria_label": "Infrastructure & Facilities",
+            "fecha_operacion": "JANUARY 2025",
+            "titulo": "Industrial HVAC and Climate Control System Overhaul",
+            "descripcion": "Comprehensive preventive maintenance on Air Handling Units (AHU) and water chillers. Executed HEPA filter updates, chemical cleaning of evaporator coils, and calibration of industrial thermostats.",
+            "imagen_url": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80",
+            "herramientas_tags": ["HVAC Systems", "Refrigerant Gases", "Pressure Gauges", "Energy Efficiency"]
+        }
+    ]
+}

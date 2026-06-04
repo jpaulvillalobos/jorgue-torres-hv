@@ -1,0 +1,908 @@
+/* ==========================================================================
+   LOBOLINK CAREER STUDIO - HIGH-PERFORMANCE F1 THEME
+   Profile: Jorge Leonardo Torres Romero (2026)
+   ========================================================================== */
+
+/* --- Variables de Sistema (Paleta de Boxes & F1) --- */
+:root {
+    --bg-dark-carbon: #0b0f14;
+    --bg-dark-pitlane: #11161d;
+    --f1-orange: #ff5500;
+    --f1-orange-glow: rgba(255, 85, 0, 0.35);
+    --telemetry-cyan: #00ffcc;
+    --telemetry-cyan-glow: rgba(0, 255, 204, 0.2);
+    
+    /* Textos */
+    --text-main: #f0f4f8;
+    --text-muted: #8a99ad;
+    --text-white: #ffffff;
+    
+    /* Tipografías */
+    --font-f1: 'Orbitron', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-body: 'Poppins', sans-serif;
+}
+
+/* --- Reseteo Estructural --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark-carbon);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* --- Capas Ambientales F1 (Overlays & Glows) --- */
+.f1-carbon-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(rgba(11, 15, 20, 0.94), rgba(11, 15, 20, 0.94)), 
+                      linear-gradient(45deg, #161c24 25%, transparent 25%), 
+                      linear-gradient(-45deg, #161c24 25%, transparent 25%), 
+                      linear-gradient(45deg, transparent 75%, #161c24 75%), 
+                      linear-gradient(-45deg, transparent 75%, #161c24 75%);
+    background-size: 4px 4px;
+    z-index: -2;
+}
+
+.pitlane-glow-sphere {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(140px);
+    z-index: -1;
+    opacity: 0.15;
+    pointer-events: none;
+}
+.neon-orange-1 { top: -10%; right: -10%; width: 500px; height: 500px; background: var(--f1-orange); }
+.neon-orange-2 { bottom: -10%; left: -10%; width: 600px; height: 600px; background: var(--f1-orange); }
+
+/* --- Encabezado de Telemetría (Header) --- */
+.f1-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(11, 15, 20, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 2px solid rgba(255, 85, 0, 0.2);
+    z-index: 100;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.race-telemetry-status {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.pit-indicator-blink {
+    width: 10px;
+    height: 10px;
+    background-color: var(--f1-orange);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--f1-orange);
+    animation: pitBlink 1s infinite alternate;
+}
+
+@keyframes pitBlink {
+    0% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+.mono-text {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--telemetry-cyan);
+    letter-spacing: -0.5px;
+}
+
+/* --- Menú de Navegación Esquilado F1 --- */
+.f1-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.f1-nav .nav-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-family: var(--font-f1);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 2px solid transparent;
+}
+
+.f1-nav .nav-link i {
+    font-size: 0.8rem;
+    color: rgba(255, 85, 0, 0.5);
+    transition: color 0.3s;
+}
+
+.f1-nav .nav-link:hover, 
+.f1-nav .nav-link.active {
+    color: var(--text-white);
+    border-bottom: 2px solid var(--f1-orange);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.f1-nav .nav-link:hover i, 
+.f1-nav .nav-link.active i {
+    color: var(--f1-orange);
+}
+
+/* --- Selectores de Idioma e Interfaz --- */
+.lang-selector-f1 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+}
+
+.lang-btn {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.3s;
+}
+
+.lang-btn.active {
+    color: var(--f1-orange);
+    font-weight: bold;
+}
+
+.lang-separator {
+    color: rgba(255,255,255,0.1);
+}
+
+/* --- Botones de Acción Especiales (F1 Action) --- */
+.btn-f1-action {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    background: transparent;
+    color: var(--f1-orange);
+    border: 1px solid var(--f1-orange);
+    font-family: var(--font-f1);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transform: skewX(-12deg); /* Efecto F1 cursivo */
+    transition: all 0.3s ease;
+    box-shadow: inset 0 0 0 0 var(--f1-orange);
+}
+
+.btn-f1-action span {
+    display: inline-block;
+    transform: skewX(12deg); /* Revierte el texto para que sea legible */
+}
+
+.btn-f1-action:hover {
+    color: var(--bg-dark-carbon);
+    background: var(--f1-orange);
+    box-shadow: 0 0 15px var(--f1-orange-glow);
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   SECCIÓN HERO / COCKPIT
+   ========================================================================== */
+.hero-f1-sector {
+    padding: 160px 0 80px 0;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 4rem;
+    align-items: flex-start;
+}
+
+/* Marco de Avatar Aero */
+.profile-frame-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.f1-avatar-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: #161c24;
+    border: 1px solid rgba(255,255,255,0.05);
+    padding: 10px;
+    clip-path: polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%); /* Esquinas cortadas */
+}
+
+.profile-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(20%) contrast(110%);
+    clip-path: polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%);
+}
+
+/* Esquinas mecánicas decorativas */
+.f1-corner {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 2px solid var(--f1-orange);
+    pointer-events: none;
+}
+.top-left { top: 5px; left: 5px; border-right: none; border-bottom: none; }
+.top-right { top: 5px; right: 5px; border-left: none; border-bottom: none; }
+.bottom-left { bottom: 5px; left: 5px; border-right: none; border-top: none; }
+.bottom-right { bottom: 5px; right: 5px; border-left: none; border-top: none; }
+
+.speed-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(90deg, var(--f1-orange), var(--telemetry-cyan));
+}
+
+/* Bloque Telemetría de Comunicaciones */
+.profile-comms-telemetry {
+    background: var(--bg-dark-pitlane);
+    padding: 1.5rem;
+    border-left: 3px solid var(--f1-orange);
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.profile-comms-telemetry p {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--text-main);
+}
+
+.profile-comms-telemetry p i {
+    color: var(--f1-orange);
+    width: 16px;
+}
+
+.license-badges {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding-top: 0.8rem;
+}
+
+.license-tag {
+    font-family: var(--font-f1);
+    font-size: 0.75rem;
+    font-weight: 900;
+    background: rgba(0, 255, 204, 0.1);
+    color: var(--telemetry-cyan);
+    border: 1px solid var(--telemetry-cyan);
+    padding: 0.2rem 0.6rem;
+    border-radius: 3px;
+}
+
+/* Contenido de Datos Principal */
+.f1-badge-category {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--f1-orange);
+    letter-spacing: 2px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.f1-tech-title {
+    font-family: var(--font-f1);
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    color: var(--text-white);
+    text-transform: uppercase;
+}
+
+.f1-sub-title {
+    font-family: var(--font-body);
+    font-size: 1.4rem;
+    color: var(--text-muted);
+    font-weight: 300;
+    margin-top: 0.5rem;
+}
+
+.f1-divider-strip {
+    height: 4px;
+    width: 100px;
+    background: var(--f1-orange);
+    margin: 2rem 0;
+    position: relative;
+}
+
+.f1-divider-strip::after {
+    content: '';
+    position: absolute;
+    right: -15px;
+    top: 0;
+    width: 10px;
+    height: 4px;
+    background: var(--telemetry-cyan);
+}
+
+.profile-summary-p {
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    text-align: justify;
+}
+
+.social-f1-hub {
+    display: flex;
+    gap: 1rem;
+}
+
+.f1-social-btn {
+    text-decoration: none;
+    font-family: var(--font-f1);
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 0.8rem 1.8rem;
+    border-radius: 0;
+    transform: skewX(-12deg);
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.f1-social-btn i {
+    transform: skewX(12deg);
+}
+
+#client-whatsapp {
+    background: var(--f1-orange);
+    color: var(--bg-dark-carbon);
+    border: 1px solid var(--f1-orange);
+}
+
+#client-whatsapp:hover {
+    background: transparent;
+    color: var(--f1-orange);
+    box-shadow: 0 0 15px var(--f1-orange-glow);
+}
+
+#client-email-btn {
+    background: transparent;
+    color: var(--text-white);
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+#client-email-btn:hover {
+    border-color: var(--telemetry-cyan);
+    color: var(--telemetry-cyan);
+}
+
+/* ==========================================================================
+   ESTILOS GENERALES DE SECCIÓN Y ENCABEZADOS
+   ========================================================================== */
+.f1-section {
+    padding: 100px 0;
+    border-top: 1px solid rgba(255,255,255,0.03);
+}
+
+.f1-section.alternative-bg {
+    background: rgba(17, 22, 29, 0.4);
+}
+
+.section-heading-f1 {
+    margin-bottom: 4rem;
+    border-left: 4px solid var(--f1-orange);
+    padding-left: 1.5rem;
+}
+
+.section-heading-f1 .pre-title {
+    color: var(--f1-orange);
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
+}
+
+.f1-title-section {
+    font-family: var(--font-f1);
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--text-white);
+    letter-spacing: -0.5px;
+}
+
+/* ==========================================================================
+   TRACK RECORD (LÍNEA DE TIEMPO)
+   ========================================================================== */
+.timeline-f1-wrapper {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 2rem;
+    border-left: 2px dashed rgba(255, 85, 0, 0.2);
+}
+
+.timeline-item-cyber {
+    position: relative;
+    margin-bottom: 3.5rem;
+}
+
+.timeline-item-cyber:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-node {
+    position: absolute;
+    left: calc(-2rem - 7px);
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    background: var(--bg-dark-carbon);
+    border: 2px solid var(--f1-orange);
+    box-shadow: 0 0 8px var(--f1-orange);
+    border-radius: 0; /* Formas F1 cuadradas */
+    transform: rotate(45deg);
+    transition: all 0.3s;
+}
+
+.timeline-item-cyber:hover .timeline-node {
+    background: var(--telemetry-cyan);
+    border-color: var(--telemetry-cyan);
+    box-shadow: 0 0 10px var(--telemetry-cyan);
+}
+
+.timeline-header-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    gap: 1.5rem;
+}
+
+.company-tech {
+    font-family: var(--font-f1);
+    font-size: 1.3rem;
+    color: var(--text-white);
+    font-weight: 700;
+}
+
+.role-tech {
+    font-family: var(--font-mono);
+    color: var(--f1-orange);
+    font-size: 0.9rem;
+    display: block;
+    margin-top: 0.1rem;
+}
+
+.period-badge-cyber {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 0.3rem 0.8rem;
+    color: var(--text-muted);
+}
+
+.timeline-body-cyber ul {
+    list-style: none;
+    padding-left: 0.5rem;
+}
+
+.timeline-body-cyber ul li {
+    position: relative;
+    padding-left: 1.5rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 0.6rem;
+}
+
+.timeline-body-cyber ul li::before {
+    content: '>';
+    position: absolute;
+    left: 0;
+    color: var(--telemetry-cyan);
+    font-family: var(--font-mono);
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   SETUP CONFIGURATION (GRILLA DE HABILIDADES)
+   ========================================================================== */
+.skills-f1-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2rem;
+}
+
+.skill-module-card {
+    background: var(--bg-dark-pitlane);
+    border: 1px solid rgba(255,255,255,0.04);
+    padding: 2rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Efecto borde bandera a cuadros superior en hover */
+.skill-module-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--f1-orange);
+    transition: width 0.3s ease;
+}
+
+.skill-module-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 85, 0, 0.2);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.skill-module-card:hover::before {
+    width: 100%;
+}
+
+.skill-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.skill-card-header i {
+    font-size: 1.8rem;
+    color: var(--f1-orange);
+}
+
+.skill-card-header h3 {
+    font-family: var(--font-f1);
+    font-size: 1.2rem;
+    color: var(--text-white);
+    text-transform: uppercase;
+}
+
+.skills-tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.skill-tag {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.07);
+    color: var(--text-muted);
+    padding: 0.3rem 0.7rem;
+    transition: all 0.3s;
+}
+
+.skill-module-card:hover .skill-tag {
+    border-color: rgba(0, 255, 204, 0.15);
+    color: var(--text-main);
+}
+
+/* ==========================================================================
+   GRID ACADEMY (EDUCACIÓN)
+   ========================================================================== */
+.education-dual-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.block-title-f1 {
+    font-family: var(--font-f1);
+    color: var(--text-white);
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.block-title-f1 i {
+    color: var(--f1-orange);
+}
+
+.cards-stack-f1 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.education-card-cyber {
+    background: rgba(255,255,255,0.01);
+    border: 1px solid rgba(255,255,255,0.04);
+    border-left: 3px solid rgba(255,255,255,0.1);
+    padding: 1.5rem;
+    transition: all 0.3s;
+}
+
+.education-card-cyber:hover {
+    border-left-color: var(--telemetry-cyan);
+    background: rgba(0, 255, 204, 0.01);
+}
+
+.edu-year {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--f1-orange);
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+.edu-title {
+    font-family: var(--font-f1);
+    font-size: 1.1rem;
+    color: var(--text-white);
+    font-weight: 700;
+}
+
+.edu-institution {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 0.2rem;
+}
+
+/* ==========================================================================
+   PIE DE PÁGINA (FOOTER)
+   ========================================================================== */
+.f1-footer {
+    background: #06090d;
+    border-top: 2px solid rgba(255, 85, 0, 0.1);
+    padding: 3rem 0;
+}
+
+.footer-flex-f1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright-text {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 0.3rem;
+}
+
+.system-clock-box {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.05);
+    padding: 0.5rem 1rem;
+}
+
+/* --- ANIMACIONES DE INTERSECCIÓN (REVEAL ENGINE) --- */
+.reveal-ready {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
+                transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.reveal-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- ADAPTABILIDAD MÓVIL --- */
+@media (max-width: 992px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .profile-frame-wrapper {
+        max-width: 400px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .education-dual-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .f1-header { position: relative; }
+    .hero-f1-sector { padding-top: 40px; }
+    .f1-nav { display: none; } /* En producción se puede suplir por un menú hamburguesa */
+    .f1-tech-title { font-size: 2.2rem; }
+    .footer-flex-f1 { flex-direction: column; gap: 1.5rem; text-align: center; }
+}
+/* ==========================================================================
+   MÓDULO EXTENDIDO: GALERÍA DE PORTAFOLIO F1
+   ========================================================================== */
+.portfolio-hero {
+    padding: 140px 0 60px 0;
+    background: rgba(17, 22, 29, 0.6);
+    border-bottom: 1px solid rgba(255, 85, 0, 0.1);
+}
+
+.filter-pitlane-hub {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2.5rem;
+}
+
+.filter-btn-f1 {
+    background: transparent;
+    color: var(--text-muted);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1.2rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    cursor: pointer;
+    transform: skewX(-12deg);
+    transition: all 0.3s ease;
+}
+
+.filter-btn-f1 span {
+    display: inline-block;
+    transform: skewX(12deg);
+}
+
+.filter-btn-f1:hover, .filter-btn-f1.active {
+    color: var(--f1-orange);
+    border-color: var(--f1-orange);
+    background: rgba(255, 85, 0, 0.05);
+    box-shadow: 0 0 10px var(--f1-orange-glow);
+}
+
+.projects-f1-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2.5rem;
+    padding: 60px 0 100px 0;
+}
+
+.project-card-f1 {
+    background: var(--bg-dark-pitlane);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    opacity: 0; /* Controlado por JS para fade-in */
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+}
+
+.project-card-f1:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 85, 0, 0.3);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+
+.project-img-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: #161c24;
+}
+
+.project-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card-f1:hover .project-img-wrapper img {
+    transform: scale(1.05);
+}
+
+.project-badge-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--bg-dark-carbon);
+    color: var(--telemetry-cyan);
+    border: 1px solid var(--telemetry-cyan);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+    font-weight: bold;
+}
+
+.project-info-content {
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-meta-date {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--f1-orange);
+    margin-bottom: 0.5rem;
+}
+
+.project-headline {
+    font-family: var(--font-f1);
+    font-size: 1.25rem;
+    color: var(--text-white);
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+}
+
+.project-description-text {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.project-tech-stack-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding-top: 1rem;
+}
+
+.tech-pill-f1 {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    background: rgba(255,255,255,0.02);
+    color: rgba(240, 244, 248, 0.7);
+    padding: 0.15rem 0.5rem;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.back-cockpit-link {
+    font-family: var(--font-f1);
+    color: var(--text-white);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.back-cockpit-link:hover {
+    color: var(--f1-orange);
+}

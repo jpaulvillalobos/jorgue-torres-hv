@@ -1,0 +1,135 @@
+{
+  "informacion_personal": {
+    "nombre_completo": "JORGE LEONARDO TORRES ROMERO",
+    "titular_profesional": "Especialista en Mantenimiento Locativo & Motores",
+    "email": "j.leonardotorres@outlook.es",
+    "telefono": "+57 3219955205",
+    "ubicacion": "Bogotá D.C., Colombia",
+    "identificacion": "C.C. 1019126744",
+    "licencias": ["A2", "B1", "C1"],
+    "whatsapp_url": "https://wa.me/573219955205?text=Hola%20Jorge,%20vimos%20tu%20perfil%20Web%20Mantenimiento%20y%20queremos%20cotizar%20una%20operación."
+  },
+  "perfil_profesional": "Técnico en mantenimiento de motores con amplia experiencia en mantenimiento locativo, electricidad básica, plomería, drywall, pintura, trabajos en alturas y apoyo logístico. Profesional responsable, disciplinado y orientado al estricto cumplimiento de objetivos operativos. Especializado en el diagnóstico, mantenimiento preventivo y correctivo de instalaciones, optimización de infraestructura y gestión de almacenamiento en entornos de alta exigencia.",
+  "habilidades_modulares": [
+    {
+      "categoria": "Mantenimiento Locativo",
+      "icono": "fa-solid fa-screwdriver-wrench",
+      "tecnologias": ["Arreglos generales", "Infraestructura", "Adecuación de oficinas", "Manejo de herramientas"]
+    },
+    {
+      "categoria": "Redes & Fluidos",
+      "icono": "fa-solid fa-faucet-drip",
+      "tecnologias": ["Plomería", "Electricidad básica", "Iluminación técnica", "Fumigación"]
+    },
+    {
+      "categoria": "Acabados de Estructura",
+      "icono": "fa-solid fa-brush",
+      "tecnologias": ["Instalación de Drywall", "Pintura comercial", "Resanes técnicos", "Acabados de fachadas"]
+    },
+    {
+      "categoria": "Logística & Alturas",
+      "icono": "fa-solid fa-boxes-stacked",
+      "tecnologias": ["Trabajo en alturas", "Apoyo logístico", "Bodega y almacenamiento", "Gestión documental"]
+    },
+    {
+      "categoria": "Sistemas & Soporte",
+      "icono": "fa-solid fa-display",
+      "tecnologias": ["Microsoft Excel", "Microsoft Word", "PowerPoint", "Atención al cliente"]
+    }
+  ],
+  "experiencia_laboral": [
+    {
+      "empresa": "IFF Colombia",
+      "cargo": "Auxiliar de Mantenimiento",
+      "periodo": "Abr 2024 - Abr 2026",
+      "funciones": [
+        "Mantenimiento locativo integral avanzado, instalación de drywall y aplicación de pintura.",
+        "Mantenimiento de redes de electricidad y plomería en áreas operativas.",
+        "Ejecución de adecuaciones estructurales y soporte técnico en sistemas de aire acondicionado industrial."
+      ]
+    },
+    {
+      "empresa": "Fundación Hematológica de Colombia",
+      "cargo": "Auxiliar de Mantenimiento",
+      "periodo": "May 2023 - Feb 2024",
+      "funciones": [
+        "Mantenimiento preventivo y correctivo de la infraestructura física e instalaciones eléctricas.",
+        "Labores operativas de plomería y adecuación ergonómica y espacial de oficinas corporativas.",
+        "Asistencia calificada en proyectos de ingeniería estructural del complejo edilicio."
+      ]
+    },
+    {
+      "empresa": "QNT Rebancarizamos",
+      "cargo": "Auxiliar de Mantenimiento",
+      "periodo": "Feb 2023 - Mar 2023",
+      "funciones": [
+        "Instalaciones generales, montajes en drywall, pintura técnica, redes eléctricas y plomería.",
+        "Soporte logístico en la recepción del edificio y control de ingresos al establecimiento.",
+        "Atención al cliente y resolución de solicitudes de mantenimiento express."
+      ]
+    },
+    {
+      "empresa": "Gold R.H. / Constructora Bolívar",
+      "cargo": "Auxiliar de Mantenimiento",
+      "periodo": "Mar 2022 - Sep 2022",
+      "funciones": [
+        "Despliegue operativo y soporte técnico a múltiples sedes de la Constructora Bolívar.",
+        "Mantenimiento locativo de instalaciones residenciales y comerciales.",
+        "Coordinación y apoyo logístico en el montaje de infraestructura para eventos corporativos."
+      ]
+    },
+    {
+      "empresa": "Unihorizonte Fundación Universitaria",
+      "cargo": "Auxiliar de Mantenimiento",
+      "periodo": "Jul 2021 - Sep 2021",
+      "funciones": [
+        "Trabajos técnicos de pintura, plomería, mantenimiento de redes eléctricas y jardinería institucional.",
+        "Soporte y traslado logístico de mobiliario para aulas y eventos académicos."
+      ]
+    },
+    {
+      "empresa": "Knightsbridge School International",
+      "cargo": "Todero / Técnico de Mantenimiento",
+      "periodo": "Abr 2021 - May 2021",
+      "funciones": [
+        "Mantenimiento general preventivo de las instalaciones del campus escolar.",
+        "Operaciones de fumigación controlada, control de plagas y paisajismo/jardinería.",
+        "Manejo seguro y control de inventario de herramientas mecánicas y eléctricas."
+      ]
+    },
+    {
+      "empresa": "IDPC - Instituto Distrital de Patrimonio Cultural",
+      "cargo": "Auxiliar de Mantenimiento",
+      "periodo": "Dic 2017 - Ene 2020",
+      "funciones": [
+        "Restauración técnica de fachadas históricas y mantenimiento locativo de bienes patrimoniales.",
+        "Reparaciones de plomería y mantenimiento de tableros y cableado eléctrico básico.",
+        "Apoyo logístico en bodega, organización de materiales y control de suministros."
+      ]
+    }
+  ],
+  "educacion_formal": [
+    {
+      "año": "2017",
+      "titulo": "Técnico en Mantenimiento de Motores",
+      "institucion": "SENA (Servicio Nacional de Aprendizaje)"
+    },
+    {
+      "año": "2014",
+      "titulo": "Bachiller Académico",
+      "institucion": "Liceo Fesan"
+    }
+  ],
+  "certificaciones_cursos": [
+    {
+      "año": "2020",
+      "curso": "Curso de Gestión Documental y Archivo",
+      "institucion": "SENA"
+    },
+    {
+      "año": "2024",
+      "curso": "Certificación de Trabajo Seguro en Alturas (Vigente)",
+      "institucion": "Centro de Entrenamiento Autorizado"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "informacion_personal": {
+    "nombre_completo": "JORGE LEONARDO TORRES ROMERO",
+    "titular_profesional": "Especialista en Mantenimiento Locativo & Motores",
+    "email": "j.leonardotorres@outlook.es",
+    "telefono": "+57 3219955205",
+    "ubicacion": "Bogotá D.C., Colombia",
+    "identificacion": "C.C. 1019126744",
+    "licencias": ["A2", "B1", "C1"],
+    "whatsapp_url": "https://wa.me/573219955205?text=Hola%20Jorge,%20vimos%20tu%20perfil%20Web%20Mantenimiento%20y%20queremos%20cotizar%20una%20operación."
+  },
+    "perfil_profesional": "Results-driven Technical Specialist with deep expertise in managing, execution, and supervision of predictive, preventive, and corrective maintenance programs across industrial infrastructure and electromecanisal assets. Highly skilled in field troubleshooting, facility logistics, team coordination, and asset reliability engineering. Adaptable to high-pressure environments, ensuring absolute operational continuity and strict compliance with HSEQ protocols.",
+    "experiencia_laboral": [
+        {
+            "empresa": "Industrial Logistics Solutions Corp.",
+            "cargo": "Lead Electromechanical & Infrastructure Coordinator",
+            "periodo": "2023 - PRESENT",
+            "funciones": [
+                "Supervised and executed preventive and corrective maintenance plans for critical plant assets, HVAC systems, power grids, and static equipment.",
+                "Coordinated third-party industrial contractors, ensuring rigid delivery parameters and adherence to corporate HSEQ guidelines.",
+                "Optimized facility operations, lowering utility costs and emergency downtime by 18% through strategic predictive maintenance protocols.",
+                "Managed maintenance parts inventory, purchasing workflows, and performance indicators (KPIs) via CMMS software."
+            ]
+        },
+        {
+            "empresa": "Tech & Services Engineering Ltda.",
+            "cargo": "Senior Field Maintenance Technician",
+            "periodo": "2020 - 2023",
+            "funciones": [
+                "Performed advanced diagnostics, overhauls, and tuning of multi-brand electric motors, transmission gearboxes, and pumping stations.",
+                "Executed emergency field interventions on automated distribution panels and emergency power generator systems.",
+                "Drafted technical reports, structural maintenance logs, and asset history sheets for global audit processes."
+            ]
+        }
+    ],
+    "habilidades_modulares": [
+        {
+            "categoria": "Industrial Maintenance",
+            "icono": "fa-solid fa-screwdriver-wrench",
+            "tecnologias": ["Overhauls", "Predictive Diagnostics", "Lubrication Engineering", "Pneumatics & Hydraulics", "Precision Alignment"]
+        },
+        {
+            "categoria": "Electromechanical Systems",
+            "icono": "fa-solid fa-bolt",
+            "tecnologias": ["3-Phase Motors", "Control Panels", "ATS Systems", "Industrial HVAC", "Electrical Testing Equipment"]
+        },
+        {
+            "categoria": "Operations & HSEQ",
+            "icono": "fa-solid fa-list-check",
+            "tecnologias": ["Contractor Management", "KPI Tracking", "CMMS Software", "Industrial Safety Standards", "Facility Logistics"]
+        }
+    ],
+    "educacion_formal": [
+        {
+            "año": "2019",
+            "titulo": "Technologist in Electromechanical Maintenance",
+            "institucion": "National Technical Institute"
+        }
+    ],
+    "certificaciones_cursos": [
+        {
+            "año": "2024",
+            "curso": "Advanced Industrial Safety & Working at Heights Certification",
+            "institucion": "HSEQ Training Center"
+        },
+        {
+            "año": "2022",
+            "curso": "Diagnosis of Electric Motors and Automation Controls",
+            "institucion": "Siemens Training Hub"
+        }
+    ]
+}

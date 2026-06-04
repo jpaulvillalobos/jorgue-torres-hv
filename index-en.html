@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jorge Torres | F1 Maintenance Hub & Technical Profile</title>
+    
+    <!-- Fuentes de Alta Velocidad (Fórmula 1 & Monospace) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=JetBrains+Mono:wght@400;500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Iconografía Técnica (FontAwesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Hoja de Estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="/image/icon.png">
+</head>
+<body>
+
+    <!-- Capas de Efectos Grid de Boxes (Grid de Carreras) -->
+    <div class="f1-carbon-overlay"></div>
+    <div class="pitlane-glow-sphere neon-orange-1"></div>
+    <div class="pitlane-glow-sphere neon-orange-2"></div>
+
+    <!-- Encabezado de Telemetría (Header) -->
+    <header class="f1-header">
+        <div class="container header-flex">
+            <div class="race-telemetry-status">
+                <span class="pit-indicator-blink"></span>
+                <span class="mono-text" id="sys-id">RACE_NODE::JORGE_TORRES_2026</span>
+            </div>
+            
+            <nav class="f1-nav">
+                <ul>
+                    <li><a href="#perfil" class="nav-link active"><i class="fa-solid fa-gauge-high"></i> Cockpit</a></li>
+                    <li><a href="#experiencia" class="nav-link"><i class="fa-solid fa-screwdriver-wrench"></i> Track Record</a></li>
+                    <li><a href="#habilidades" class="nav-link"><i class="fa-solid fa-gears"></i> Setup</a></li>
+                    <li><a href="#educacion" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> Grid Academy</a></li>
+                </ul>
+            </nav>
+
+            <!-- Selector Multi-idioma (Sincronizado para el estado EN) -->
+            <div class="lang-selector-f1">
+                <a href="index.html" class="lang-btn"><i class="fa-solid fa-flag-checkered"></i> ES</a>
+                <span class="lang-separator">|</span>
+                <a href="index-en.html" class="lang-btn active">EN</a>
+            </div>
+
+            <!-- Botón de Enlace al Portafolio de Proyectos / Operaciones -->
+            <div class="contact-cta">
+                <a id="portfolio-top-link" href="portafolio-en.html" class="btn-f1-action">
+                    <span>PORTFOLIO</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección Principal: El Cockpit (Perfil Técnico) -->
+    <section id="perfil" class="hero-f1-sector">
+        <div class="container hero-grid">
+            
+            <!-- Contenedor de Imagen y Datos de Contacto Rápido -->
+            <div class="profile-frame-wrapper">
+                <div class="f1-avatar-frame">
+                    <!-- Imagen de Jorge Torres -->
+                    <img id="client-avatar" src="/image/perfil.png" alt="Jorge Leonardo Torres Romero" class="profile-avatar">
+                    <div class="f1-corner top-left"></div>
+                    <div class="f1-corner top-right"></div>
+                    <div class="f1-corner bottom-left"></div>
+                    <div class="f1-corner bottom-right"></div>
+                    <div class="speed-bar"></div>
+                </div>
+                
+                <div class="profile-comms-telemetry">
+                    <p class="mono-text"><i class="fa-solid fa-envelope"></i> <span id="client-email">...</span></p>
+                    <p class="mono-text"><i class="fa-solid fa-phone"></i> <span id="client-phone">...</span></p>
+                    <p class="mono-text"><i class="fa-solid fa-location-dot"></i> <span id="client-location">...</span></p>
+                    <p class="mono-text"><i class="fa-solid fa-id-card"></i> <span id="client-id-card">...</span></p>
+                    <div class="license-badges" id="client-licenses">
+                        <!-- Las licencias de conducción se inyectarán de forma modular aquí -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Datos de Despliegue del Perfil -->
+            <div class="hero-text-content">
+                <span class="f1-badge-category" id="client-badge">MAINTENANCE TECHNICIAN // OPERATIONS</span>
+                <h1 id="client-name" class="f1-tech-title">LOADING_PILOT...</h1>
+                <h2 id="client-title" class="f1-sub-title">LOADING_SPECIALIZATION...</h2>
+                <div class="f1-divider-strip"></div>
+                
+                <p id="client-summary" class="profile-summary-p">
+                    Synchronizing operator records with the central technical database...
+                </p>
+                
+                <!-- Contacto Directo / Descarga de HV -->
+                <div class="social-f1-hub">
+                    <a id="client-whatsapp" href="#" target="_blank" rel="noopener noreferrer" class="f1-social-btn"><i class="fa-brands fa-whatsapp"></i> Contact Pitlane</a>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Sección de Experiencia: Historial de Carreras (Track Record) -->
+    <section id="experiencia" class="f1-section">
+        <div class="container">
+            <div class="section-heading-f1">
+                <div class="pre-title mono-text">// MAINTENANCE_OPERATIONS_LOG</div>
+                <h2 class="f1-title-section">Track Record & Field Operations</h2>
+            </div>
+            
+            <!-- Línea de tiempo estructurada estilo telemetría de carrera -->
+            <div id="experience-timeline" class="timeline-f1-wrapper"></div>
+        </div>
+    </section>
+
+    <!-- Sección de Habilidades: Configuración Mecánica (Setup) -->
+    <section id="habilidades" class="f1-section alternative-bg">
+        <div class="container">
+            <div class="section-heading-f1">
+                <div class="pre-title mono-text">// CORE_SKILLS_SETUP</div>
+                <h2 class="f1-title-section">Technical Capabilities Setup</h2>
+            </div>
+            
+            <!-- Grilla modular donde se inyectarán las especialidades -->
+            <div id="skills-grid" class="skills-f1-grid"></div>
+        </div>
+    </section>
+
+    <!-- Sección de Formación: Academia Técnica (Grid Academy) -->
+    <section id="educacion" class="f1-section">
+        <div class="container">
+            <div class="section-heading-f1">
+                <div class="pre-title mono-text">// EDUCATION_CREDENTIALS</div>
+                <h2 class="f1-title-section">Training & Credentials</h2>
+            </div>
+            
+            <div class="education-dual-grid">
+                <div>
+                    <h3 class="block-title-f1"><i class="fa-solid fa-graduation-cap"></i> Official Technical Education</h3>
+                    <div id="education-container" class="cards-stack-f1"></div>
+                </div>
+                <div>
+                    <h3 class="block-title-f1"><i class="fa-solid fa-award"></i> Certifications & Complementary Courses</h3>
+                    <div id="certifications-container" class="cards-stack-f1"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de Página F1 -->
+    <footer class="f1-footer">
+        <div class="container footer-flex-f1">
+            <div class="footer-brand-tech">
+                <p class="mono-text">TRACK ENGINE BY LOBOLINK // JORGE TORRES CONFIGURATION</p>
+                <p class="copyright-text">&copy; 2026. All rights reserved. Interface adapted with high-impact telemetry.</p>
+            </div>
+            <div class="system-clock-box">
+                <span class="mono-text">STATUS: <span style="color: #ff5500;">PITS_OPEN // ONLINE</span></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Motor JavaScript unificado para index y detección dinámica de idioma -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>
