@@ -906,3 +906,156 @@ body {
 .back-cockpit-link:hover {
     color: var(--f1-orange);
 }
+
+/* ==========================================================================
+   SISTEMA DE ADAPTABILIDAD EN PISTA (RESPONSIVE ENGINE)
+   ========================================================================== */
+
+/* --- PANTALLAS MEDIANAS / TABLETS (max-width: 992px) --- */
+@media (max-width: 992px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .profile-frame-wrapper {
+        max-width: 400px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .education-dual-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .skills-f1-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+/* --- TELEFONOS INTELIGENTES / SMARTPHONES (max-width: 768px) --- */
+@media (max-width: 768px) {
+    /* Estructura Base y Contenedores */
+    .f1-header { 
+        position: relative; 
+    }
+    .header-flex {
+        flex-direction: column;
+        gap: 1rem;
+        height: auto;
+        padding: 1rem 0;
+        text-align: center;
+    }
+    .race-telemetry-status, .lang-selector-f1 {
+        justify-content: center;
+    }
+    .hero-f1-sector { 
+        padding-top: 40px; 
+    }
+    .container {
+        padding: 0 1.25rem;
+    }
+    .f1-nav { 
+        display: none; /* Menú oculto en móvil */
+    } 
+
+    /* Tipografías y Títulos */
+    .f1-tech-title { 
+        font-size: 2.2rem; 
+    }
+    .section-heading-f1 {
+        margin-bottom: 2.5rem;
+    }
+
+    /* Track Record (Línea de tiempo) */
+    .timeline-header-block {
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+    .period-badge-cyber {
+        align-self: flex-start;
+    }
+
+    /* Módulo Extendido: Galería de Portafolio F1 */
+    .portfolio-hero {
+        padding: 60px 0 40px 0;
+        text-align: center;
+    }
+    
+    /* Barra de filtros dinámica (Modo Carrusel Táctil Horizontal) */
+    .filter-pitlane-hub {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 0.5rem;
+        padding: 0.8rem 0.2rem;
+        justify-content: flex-start;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Oculta scrollbar en Firefox */
+    }
+    .filter-pitlane-hub::-webkit-scrollbar {
+        display: none; /* Oculta scrollbar en Chrome/Safari */
+    }
+    .filter-btn-f1 {
+        flex: 0 0 auto;
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+    }
+
+    /* Parrilla de Proyectos Obligada a Monocolumna */
+    .projects-f1-grid {
+        grid-template-columns: 1fr;
+        gap: 1.8rem;
+        padding: 40px 0 60px 0;
+    }
+
+    .project-card-f1 {
+        width: 100%;
+        max-width: 100%;
+    }
+    .project-info-content {
+        padding: 1.4rem;
+    }
+
+    /* Footer */
+    .footer-flex-f1 { 
+        flex-direction: column; 
+        gap: 1.5rem; 
+        text-align: center; 
+    }
+    .system-clock-box {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* --- AJUSTE FINO PARA PANTALLAS MUY PEQUEÑAS (max-width: 480px) --- */
+@media (max-width: 480px) {
+    .f1-tech-title { 
+        font-size: 1.8rem; 
+    }
+    .f1-title-section {
+        font-size: 1.6rem;
+    }
+    .hero-f1-sector {
+        padding-bottom: 40px;
+    }
+    .f1-divider-strip {
+        margin: 1.5rem 0;
+    }
+    .profile-summary-p {
+        font-size: 0.95rem;
+        text-align: left; /* Más legible en pantallas angostas */
+        margin-bottom: 1.8rem;
+    }
+    .social-f1-hub {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    .f1-social-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    .project-headline {
+        font-size: 1.15rem;
+    }
+}
